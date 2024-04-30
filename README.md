@@ -1,6 +1,6 @@
 ## CLIKnowledgeBase
 
-One place for all .txt and .pdf files. .doc .xls .csv and any other files that need to be organized and easier to find.
+One place for all your .txt .pdf .doc .xls .csv and any other files you need organized and easy to find.
 
 The work currently in process, but the main functionality is already here
 
