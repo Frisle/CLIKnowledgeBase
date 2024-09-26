@@ -130,10 +130,7 @@ def delete_note(list_data, index_list):
 def remove_notes(user_input, elem, file_name):
     position = ""
     lines_indexes = ""
-    if elem == "Note":
-        position = user_input[:10]
-        lines_indexes = user_input[11:].split()
-    elif elem == "Artifact":
+    if elem == "Artifact":
         position = "artifacts"
         lines_indexes = user_input.split()
     with open(file_name, "r") as json_file:
@@ -167,3 +164,20 @@ def remove_notes(user_input, elem, file_name):
 
     with open(file_name, "w") as json_file:
         json.dump(file_data, json_file, ensure_ascii=False, indent=4)
+
+
+def file_updater():
+    file_list = os.listdir("connected")
+    for index, item in enumerate(file_list):
+        if item != ".placeholder":
+            name, extension = os.path.splitext(item)
+            size = os.path.getsize(path) / 1024
+            size_in_bt = '{0:.2f}'.format(size)
+            update_artifact_list("artifacts", json_data_list_file, item, "", "", "", "")
+
+def edit_db():
+    with open(json_data_list_file, "r") as json_file:
+        file_data = json.load(json_file)
+        index_list = []
+        print(file_data)
+edit_db()
